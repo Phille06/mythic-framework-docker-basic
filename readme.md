@@ -76,6 +76,49 @@ http://YOUR-SERVER-IP:40120
 
 ---
 
+## Adding Admins
+
+### Step 1 — Find your identifiers
+
+1. Start the server
+2. Connect with your FiveM client
+3. In the server console, type `status`
+4. Find your name in the output and copy your identifiers
+
+### Step 2 — Add to server.cfg
+
+Open `./data/serverfiles/server.cfg` and add one of the following:
+
+```
+# Add by FiveM identifier
+add_principal identifier.fivem:123456 group.admin
+
+# Add by Discord ID (recommended)
+add_principal identifier.discord:123456789012345678 group.admin
+
+# Add by Steam Hex
+add_principal identifier.steam:110000112345678 group.admin
+
+# Add by License
+add_principal identifier.license:abc123def456 group.admin
+```
+
+> **Recommended:** Use Discord ID for admin permissions — it's consistent across server wipes and easy to verify.
+
+### Step 3 — MongoDB role (required)
+
+ACE permissions alone are not enough. The character document in MongoDB must also have an admin role set. Find the character document in the `fivem_game` database and add:
+
+```json
+{
+  "role": "admin"
+}
+```
+
+Use `"role": "owner"` for full permissions. Without this MongoDB role, admin commands will not work even with ACE permissions configured.
+
+---
+
 ## Useful Commands
 
 ```bash
