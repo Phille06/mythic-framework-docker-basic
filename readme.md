@@ -46,7 +46,6 @@ Rename `.env.example` to `.env`, open it in any text editor, and fill in these v
 | `MONGO_INITDB_ROOT_PASSWORD` | Any secure password for MongoDB |
 | `SERVER_LICENSE_KEY` | Your `cfxk_...` key from Step 2 |
 | `SERVER_NAME` | Your server's display name |
-| `TXADMIN_MASTER_PASSWORD` | Password to log into the txAdmin web panel |
 
 Leave everything else as default unless you know what you're changing.
 
@@ -71,8 +70,6 @@ Once the server is running, open your browser and go to:
 ```
 http://YOUR-SERVER-IP:40120
 ```
-
-Log in with the username and password you set in `.env` (`TXADMIN_MASTER_USERNAME` / `TXADMIN_MASTER_PASSWORD`).
 
 ---
 
