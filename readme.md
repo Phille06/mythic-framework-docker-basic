@@ -46,6 +46,9 @@ Rename `.env.example` to `.env`, open it in any text editor, and fill in these v
 | `MONGO_INITDB_ROOT_PASSWORD` | Any secure password for MongoDB |
 | `SERVER_LICENSE_KEY` | Your `cfxk_...` key from Step 2 |
 | `SERVER_NAME` | Your server's display name |
+| `STEAM_WEB_API_KEY` | Steam API key for Steam authentication |
+
+> **Getting a Steam Web API key:** Go to [steamcommunity.com/dev/apikey](https://steamcommunity.com/dev/apikey), log in, and register any domain name.
 
 Leave everything else as default unless you know what you're changing.
 
